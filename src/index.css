@@ -1,0 +1,190 @@
+:root {
+    --typography-spacing-vertical: 0rem;
+    --block-spacing-vertical: 0rem;
+    --spacing: 0rem;
+}
+
+html {
+    font-family: 'Lato', 'Noto Sans JP', 'ヒラギノ角ゴ ProN', 'Hiragino Kaku Gothic ProN', 'メイリオ', Meiryo,
+        'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
+    color: #444;
+}
+
+body {
+    padding-left: 4.5em;
+}
+
+a {
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    display: block;
+}
+
+#prev {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    right: 1em;
+    bottom: 4.5em;
+    width: 3em;
+    height: 3em;
+    font-weight: bold;
+    border-radius: 4em;
+    background-color: #0008;
+    color: #fff;
+    cursor: pointer;
+}
+
+#next {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    right: 1em;
+    bottom: 1em;
+    width: 3em;
+    height: 3em;
+    font-weight: bold;
+    border-radius: 4em;
+    background-color: #0008;
+    color: #fff;
+    cursor: pointer;
+}
+
+#prev p,
+#next p {
+    color: #fff;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+}
+
+h1,
+h2,
+h3 {
+    font-weight: bold;
+    color: #666;
+}
+
+.threads {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.threads > div {
+    padding: 0 0.5em;
+}
+
+#timeline {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    width: 4em;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    justify-content: space-evenly;
+    /* background-color: #666; */
+    background: linear-gradient(
+        90deg,
+        rgba(0, 0, 0, 0.75) 0%,
+        rgba(0, 0, 0, 0.75) 50%,
+        rgba(0, 0, 0, 0.5) 50%,
+        rgba(0, 0, 0, 0.5) 100%
+    );
+}
+
+.month {
+    display: flex;
+    margin: -0.5em 0;
+    justify-content: space-between;
+    transition: 0.3s;
+    cursor: pointer;
+    color: #fff;
+    padding: 0 0.4em;
+    font-family: 'Courier New', monospace;
+    font-weight: bold;
+    background-color: transparent;
+}
+
+.month:hover {
+    margin: 0;
+    background-color: #fc0;
+}
+
+.year {
+    width: 1em;
+    transform: rotate(90deg);
+}
+
+.month span {
+    pointer-events: none;
+}
+
+#main {
+    display: flex;
+    flex-direction: column;
+}
+
+nav {
+    position: sticky;
+    top: 0;
+}
+
+#stats {
+    padding-left: 1em;
+}
+
+.date {
+    position: sticky;
+    top: 1em;
+    font-size: xx-large;
+    font-weight: bold;
+    color: #000;
+    opacity: 0.3;
+}
+
+.tweets {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+}
+
+.dms {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    border-left: 1px dotted #0004;
+}
+
+.time {
+    font-size: xx-small;
+    opacity: 0.6;
+}
+
+.name {
+    font-size: small;
+    opacity: 0.6;
+}
+
+.text {
+    white-space: pre-wrap;
+    padding-left: 0.5em;
+    border-left: 0.5em solid #0002;
+}
+
+.media {
+    border-left: 0.5em solid #0002;
+    padding: 0.5em;
+}
+
+img,
+video {
+    max-width: 100%;
+    width: 100%;
+}
