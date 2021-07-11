@@ -85,11 +85,10 @@ h3 {
     flex-direction: column;
     position: fixed;
     width: 4em;
-    height: 100vh;
+    min-height: 100vh;
     top: 0;
     left: 0;
-    justify-content: space-evenly;
-    /* background-color: #666; */
+    padding: 3em 0;
     background: linear-gradient(
         90deg,
         rgba(0, 0, 0, 0.75) 0%,
@@ -101,7 +100,6 @@ h3 {
 
 .month {
     display: flex;
-    margin: -0.5em 0;
     justify-content: space-between;
     transition: 0.3s;
     cursor: pointer;
@@ -152,12 +150,14 @@ nav {
 .tweets {
     display: flex;
     flex-direction: column;
+    min-width: 256px;
     max-width: 400px;
 }
 
 .dms {
     display: flex;
     flex-direction: column;
+    min-width: 256px;
     max-width: 400px;
     border-left: 1px dotted #0004;
 }

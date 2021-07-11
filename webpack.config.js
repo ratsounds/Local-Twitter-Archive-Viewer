@@ -63,11 +63,14 @@ const config = {
     ],
   },
   plugins: [
+    new MiniCssExtractPlugin(),
+    new HtmlWebpackInlineSourcePlugin(HtmlWebpackPlugin),
     new HtmlWebpackPlugin({
       title: 'Local Twitter Archive Viewer',
       inlineSource: '.(js|css)$',
       filename: 'index.html',
       template: 'src/index.html',
+      cache: false,
       minify: {
         html5: true,
         collapseWhitespace: true,
@@ -84,8 +87,6 @@ const config = {
         useShortDoctype: true,
       },
     }),
-    new MiniCssExtractPlugin(),
-    new HtmlWebpackInlineSourcePlugin(HtmlWebpackPlugin),
     new CleanWebpackPlugin({
       protectWebpackAssets: false,
       cleanAfterEveryBuildPatterns: ['bundle.js', 'bundle.css'],
